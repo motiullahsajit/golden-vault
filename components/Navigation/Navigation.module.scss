@@ -1,0 +1,96 @@
+.navigation {
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #cbd5e0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #cbd5e0;
+}
+
+.navLink::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #cbd5e0;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 10;
+  display: none;
+}
+
+.tooltip ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip li {
+  padding: 8px 16px;
+}
+
+.tooltip a {
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tooltip a:hover {
+  color: #1a202c;
+}
+
+.relative:hover .tooltip {
+  display: block;
+}

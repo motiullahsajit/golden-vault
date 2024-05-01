@@ -4,11 +4,11 @@ import SideBar from "../../components/SideBar/SideBar";
 
 export default function Dashboard() {
   return (
-    <div className="flex">
+    <main className="flex">
       <SideBar />
-      <div className="flex-1">
+      <div>
         <h1 className="text-2xl font-bold">Dashboard</h1>
       </div>
-    </div>
+    </main>
   );
 }
