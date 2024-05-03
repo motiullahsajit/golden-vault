@@ -1,8 +1,6 @@
-// Campaigns.jsx
-
-import CampaignCard from "../../components/CampaignCard/CampaignCard";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
+import CampaignCard from "./CampaignCard";
 
 export default function Campaigns() {
   const campaigns = [
@@ -26,7 +24,6 @@ export default function Campaigns() {
         avatar: "/jane-smith-avatar.jpg",
       },
     },
-    // Add more campaigns as needed
   ];
   return (
     <>

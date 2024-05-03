@@ -5,7 +5,6 @@ import Footer from "../../components/Footer/Footer";
 import styles from "./Profile.module.scss";
 
 export default function Profile() {
-  // Sample user data
   const [user, setUser] = useState({
     profilePicture:
       "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -15,55 +14,46 @@ export default function Profile() {
     semester: "3rd",
   });
 
-  // Form state
   const [formData, setFormData] = useState({
     name: user.name,
     department: user.department,
     semester: user.semester,
     newPassword: "",
     confirmPassword: "",
-    newProfilePicture: null, // New state for profile picture upload
+    newProfilePicture: null,
   });
 
-  // Update form data
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle profile picture upload
   const handleProfilePictureChange = (e) => {
     setFormData({ ...formData, newProfilePicture: e.target.files[0] });
   };
 
-  // Update user information
   const handleSubmitUserInfo = (e) => {
     e.preventDefault();
-    // Logic to update user information
     setUser({
       ...user,
       name: formData.name,
       department: formData.department,
       semester: formData.semester,
-      // Assuming you want to update the profile picture as well
       profilePicture: formData.newProfilePicture
         ? URL.createObjectURL(formData.newProfilePicture)
-        : user.profilePicture, // Use existing picture if not updated
+        : user.profilePicture,
     });
-    // Clear form data
+
     setFormData({
       ...formData,
       newPassword: "",
       confirmPassword: "",
-      newProfilePicture: null, // Reset profile picture upload field
+      newProfilePicture: null,
     });
   };
 
-  // Update user password
   const handleSubmitPassword = (e) => {
     e.preventDefault();
-    // Logic to update user password
     console.log("Updating password...");
-    // Clear password fields
     setFormData({
       ...formData,
       newPassword: "",
@@ -76,7 +66,6 @@ export default function Profile() {
       <Navigation />
       <main className={styles.profilePage}>
         <div className={styles.container}>
-          {/* Profile Image and Info */}
           <div className={styles.profileInfoContainer}>
             <div className={styles.profileInfo}>
               <div className={styles.profilePictureContainer}>
@@ -103,9 +92,7 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          {/* Update Info and Update Password Forms */}
           <div className={styles.formContainer}>
-            {/* Update Info Form */}
             <form
               onSubmit={handleSubmitUserInfo}
               className={styles.profileForm}
@@ -156,7 +143,6 @@ export default function Profile() {
                 Update
               </button>
             </form>
-            {/* Update Password Form */}
             <form
               onSubmit={handleSubmitPassword}
               className={styles.profileForm}

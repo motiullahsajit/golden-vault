@@ -61,7 +61,9 @@ const Navigation = () => {
                       />
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent
+                    style={{ backgroundColor: "#1a202c", padding: "1rem" }}
+                  >
                     <ul>
                       <li>
                         <Link href="/profile">Profile</Link>

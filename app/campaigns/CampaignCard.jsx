@@ -1,5 +1,3 @@
-// CampaignCard.jsx
-
 const CampaignCard = ({ campaign }) => {
   const { title, thumbnail, mentor } = campaign;
 

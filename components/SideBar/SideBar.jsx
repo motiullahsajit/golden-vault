@@ -26,7 +26,7 @@ const Sidebar = () => {
               className={styles["sidebar-link"]}
               href="/dashboard/campaigns"
             >
-              Campaigns
+              Manage Campaigns
             </Link>
           </li>
           <li className={styles["sidebar-list-item"]}>

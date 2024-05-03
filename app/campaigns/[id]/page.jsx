@@ -15,7 +15,7 @@ export default function Details() {
       avatar:
         "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
-    access: true, // Change to false if student doesn't have access
+    access: true,
     content: {
       roadmap: "Roadmap content here",
       resources: "Resources content here",
@@ -24,7 +24,6 @@ export default function Details() {
     },
   };
 
-  // const router = useRouter();
   const [activeTab, setActiveTab] = useState("roadmap");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleTabChange = (tab) => {
@@ -32,11 +31,11 @@ export default function Details() {
   };
 
   const joinNow = () => {
-    setIsModalOpen(true); // Open the modal when "Join Now" button is clicked
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
+    setIsModalOpen(false);
   };
   return (
     <>

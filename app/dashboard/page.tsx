@@ -1,5 +1,3 @@
-"use client";
-import CreateModule from "../../components/CreateModule/CreateModule";
 import SideBar from "../../components/SideBar/SideBar";
 
 export default function Dashboard() {
