@@ -1,3 +1,5 @@
+// Campaigns.jsx
+
 import CampaignCard from "../../components/CampaignCard/CampaignCard";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/Navigation/Navigation";
@@ -29,10 +31,9 @@ export default function Campaigns() {
   return (
     <>
       <Navigation />
-      <main>
-        <div className="container mx-auto py-8">
-          <h1 className="text-3xl font-bold mb-6">All Campaigns</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="bg-gray-100 pt-10 pb-10">
+        <div className="container mx-auto py-8 max-w-7xl">
+          <div>
             {campaigns.map((campaign) => (
               <CampaignCard key={campaign.id} campaign={campaign} />
             ))}
